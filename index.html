@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHROMA KNIGHT — PixiJS v8 GPU 引擎版</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main id="stage-shell">
+      <div id="canvas-wrap">
+        <div id="pixi-mount" style="width: 100%; height: 100%"></div>
+        <div id="crt-overlay"></div>
+        <div id="editor-ui"></div>
+      </div>
+
+      <div id="touch-controls" aria-label="行動端虛擬手把">
+        <div class="touch-dpad">
+          <button class="tbtn" data-key="ArrowLeft" aria-label="左">◀</button>
+          <div class="touch-dpad-mid">
+            <button class="tbtn small" data-key="ArrowUp" aria-label="上">▲</button>
+            <button class="tbtn small" data-key="ArrowDown" aria-label="下/重擊">▼</button>
+          </div>
+          <button class="tbtn" data-key="ArrowRight" aria-label="右">▶</button>
+        </div>
+        <div class="touch-actions">
+          <button class="tbtn phase" data-key="ShiftLeft">相位</button>
+          <button class="tbtn dash" data-key="KeyX">衝刺</button>
+          <button class="tbtn jump" data-key="Space">跳躍</button>
+        </div>
+      </div>
+
+      <footer id="controls-bar">
+        <span class="badge solar" id="phase-pill">PIXI v8 • SOLAR</span>
+        <button id="touch-toggle-btn" class="mini-btn" type="button">🎮 觸控手把</button>
+        <span><kbd>A</kbd><kbd>D</kbd> 移動</span>
+        <span><kbd>Space</kbd> 跳躍/蹬牆跳</span>
+        <span><kbd>X</kbd> 衝刺</span>
+        <span><kbd>Shift</kbd> 相位切換（震波折射）</span>
+        <span><kbd>↓</kbd> 空中重擊</span>
+        <span><kbd>1–6</kbd> 選關</span>
+        <span><kbd>F2</kbd> 關卡編輯</span>
+        <span><kbd>G</kbd> Pixi Filter</span>
+        <span><kbd>T</kbd> 殘影</span>
+        <span><kbd>M</kbd> 靜音</span>
+      </footer>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
